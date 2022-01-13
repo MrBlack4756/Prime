@@ -107,24 +107,11 @@ bot.on("guildDelete", async guild => {
 
 bot.on('interactionCreate', async interaction => { 
   if(!interaction.guild.available) return;
+  // ye permission checker sade
   if(!interaction.channel.permissionsFor(interaction.guild.me).has([Permissions.FLAGS.USE_EXTERNAL_EMOJIS, 
   , Permissions.FLAGS.ATTACH_FILES, Permissions.FLAGS.EMBED_LINKS], true)) return interaction.reply(
     ":x: | No permission"
   )
-  if(db.has(`message_${interaction.user.id}`)) {
-    let msg = await db.fetch(`message_${interaction.user.id}.message`)
-    const Mess = new MessageEmbed()
-    .setColor('AQUA')
-    .setTitle('> **پیغام از طرف تیم پشتیبانی**')
-    .setThumbnail(interaction.user.avatarURL({dynamic: false, size: 512}))
-    .addField('\n**Message : **', `${msg}`)
-    .setFooter({text: 'این متن دوباره نشان داده نمیشود'})
-    .setTimestamp();
-    return await interaction.reply({embeds: [Mess], ephemeral: true}).then((i) => {
-       db.delete(`message_${interaction.user.id}`)
-    })
-  }
-  
     if(interaction.isCommand()) {
 
       if(!bot.commands.has(interaction.commandName)) return;

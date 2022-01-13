@@ -4,7 +4,6 @@
   "description": "Prime Handler | Polaroid's mid-level command handler based on Discord.JS V13 ",
   "main": "index.js",
   "dependencies": {
-    "@canvacord/emoji-parser": "^1.0.1",
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.2.0-canary.0",
     "@persian-tools/persian-tools": "^1.6.1",
@@ -24,10 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "lint": "eslint ."
+    "start": "node index.js"
   },
-  "author": "Kavisho",
-  "license": "MIT",
-  "keywords": []
+  "author": "Polaroid-Development",
+  "license": "MIT"
 }

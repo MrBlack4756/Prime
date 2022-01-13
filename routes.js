@@ -27,7 +27,7 @@ app.post("/dblwebhook", weebhook.listener(async vote => {
   if(vote.type === 'test') return console.log("test test! vote")
 const d = await axios({
   method: "GET",
-  url: encodeURI(`https://orpex.herokuapp.com/userz/${vote.user}`) //api user ma bara dor zadan guil member intent :/
+  url: encodeURI(`https://orpex.herokuapp.com/userz/${vote.user}`) //api user ma bara dor zadan guild member intent :/
 })
 const { avatar, tag } = await d.data;
 return discord.channels.cache.get(`ID CHANNEL VOTE HA`)

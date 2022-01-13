@@ -40,6 +40,7 @@ tagir value ha dar `config.json` be chizaye khaste shode.
 1. Top.gg post va vote 
 2. ControlPanel Bot
 3. site motasel be source! (express.js bmola)
+4. System Log rangi
 
 # SKi narid Mamnoon
 
